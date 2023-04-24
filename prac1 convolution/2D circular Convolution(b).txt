@@ -1,0 +1,20 @@
+clc ;
+x=[1,2,3;4,5,6;7,8,9];
+h=[1,1,1;1,1,1;1,1,1];
+disp(x,'x=');
+disp(h,'h=');
+X=fft2(x); 
+H=fft2(h);
+Y=X.*H; 
+y=ifft(Y);
+disp(y, '2D Circular Correlation Result: y =' );
+
+/*clc is a MATLAB command that clears the command window, removing any text or output that was previously displayed.
+
+The code you provided defines two matrices x and h using MATLAB's matrix notation. The disp() function is then used to display the matrices with labels 'x=' and 'h=', respectively.
+
+The fft2() function computes the two-dimensional discrete Fourier transform of the matrices x and h. The resulting transforms are stored in variables X and H, respectively.
+
+The .* operator is used to perform element-wise multiplication between X and H. This is followed by an inverse two-dimensional fast Fourier transform using ifft() to obtain the 2D circular correlation of x and h. The resulting matrix is stored in variable y.
+
+Finally, disp() function is used again to display the resulting matrix y with a label '2D Circular Correlation Result: y ='.*/
