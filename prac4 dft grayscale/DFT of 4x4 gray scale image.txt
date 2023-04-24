@@ -1,0 +1,10 @@
+clc;
+x=[1,1,1,1;1,1,1,1;1,1,1,1;1,1,1,1];
+X=fft(x,-1);
+disp(X,"X[k]=");
+
+/*The fft() function is then used to compute the one-dimensional Fast Fourier Transform (FFT) of the matrix x. The fft() function can be used to calculate the FFT of a signal along one or more dimensions. In this case, the second argument -1 specifies that the FFT should be computed along the columns of x.
+
+The resulting FFT is stored in the matrix X.
+
+Finally, the disp() function is used to display the matrix X with a label 'X[k]='. This displays the complex values of the FFT coefficients, which represent the frequency components of the input signal x.*/
